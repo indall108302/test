@@ -6,16 +6,23 @@ env/
 venv/
 .env
 
+# Data and Datasets
+dataset/
+datasets/
+augmented_dataset/
+фото/
+frames/
+
 # Backend specific
 output.avi
 output.mp4
 capture.mp4
 runs/
 *.pt
-!yolo11n.pt # Keep base models if needed, but best.pt usually is in runs/
 *.jpg
 *.mp4
 *.avi
+*.mov
 
 # IDE
 .idea/
