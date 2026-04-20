@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+.env
+
+# Backend specific
+output.avi
+output.mp4
+capture.mp4
+runs/
+*.pt
+!yolo11n.pt # Keep base models if needed, but best.pt usually is in runs/
+*.jpg
+*.mp4
+*.avi
+
+# IDE
+.idea/
+.vscode/
+
+# Frontend (Node)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/build/
+.DS_Store
