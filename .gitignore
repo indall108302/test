@@ -9,6 +9,11 @@ venv/
 # Data and Datasets
 dataset/
 datasets/
+combined_dataset/
+project_details/
+project_details-2026_04_21_09_10_31-camvid 1.0/
+temp_converted_labels/
+frames/
 augmented_dataset/
 фото/
 runs/
@@ -22,6 +27,7 @@ capture.mp4
 *.mp4
 *.avi
 *.mov
+*.zip
 
 # IDE
 .idea/
@@ -32,3 +38,7 @@ frontend/node_modules/
 frontend/.env
 frontend/build/
 .DS_Store
+
+convert_new_dataset.py
+organize_dataset.py
+train.py
