@@ -7,7 +7,7 @@ from collections import defaultdict
 model = YOLO('runs/segment/train2/weights/best.pt')
 
 # Открываем видеофайл
-video_path = "video_3.mp4"
+video_path = 0
 cap = cv2.VideoCapture(video_path)
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi', fourcc, 30.0, (1920, 1080))

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Play, Square, Video, BarChart3, List, Activity, Cpu } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = window.location.origin.replace('5173', '8000');
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -29,7 +29,7 @@ function App() {
 
   const startStream = async (videoName) => {
     try {
-      await axios.post(`${API_BASE}/api/start?video_name=${videoName}`);
+      await axios.get(`${API_BASE}/api/start?video_name=${videoName}`);
       setActiveVideo(videoName);
       setIsRunning(true);
       startPolling();
@@ -55,7 +55,6 @@ function App() {
         const res = await axios.get(`${API_BASE}/api/stats`);
         setStats(res.data);
         
-        // Add to chart data
         const total = Object.values(res.data.totals).reduce((a, b) => a + b, 0);
         setChartData(prev => [...prev.slice(-19), { time: new Date().toLocaleTimeString(), count: total }]);
       } catch (err) {
@@ -129,7 +128,7 @@ function App() {
                   style={{ background: 'linear-gradient(135deg, #10b981, #059669)' }}
                   onClick={async () => {
                     try {
-                      await axios.post(`${API_BASE}/api/camera/start`);
+                      await axios.get(`${API_BASE}/api/camera/start`);
                       setIsRunning(true);
                       startPolling();
                     } catch (e) { alert("Ошибка подключения камеры"); }
