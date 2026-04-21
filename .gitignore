@@ -21,7 +21,6 @@ capture.mp4
 *.jpg
 *.mp4
 *.avi
-*.pt
 *.mov
 
 # IDE
