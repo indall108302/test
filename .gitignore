@@ -11,17 +11,17 @@ dataset/
 datasets/
 augmented_dataset/
 фото/
+runs/
 frames/
 
 # Backend specific
 output.avi
 output.mp4
 capture.mp4
-runs/
-*.pt
 *.jpg
 *.mp4
 *.avi
+*.pt
 *.mov
 
 # IDE
@@ -30,7 +30,6 @@ runs/
 
 # Frontend (Node)
 frontend/node_modules/
-frontend/dist/
 frontend/.env
 frontend/build/
 .DS_Store
